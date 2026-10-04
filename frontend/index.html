@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>File Protection Utility</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+
+    <div class="background"></div>
+
+    <!-- Main Container -->
+
+    <main class="container">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <div class="logo">
+                🔐
+            </div>
+
+            <div>
+                <h1>File Protection Utility</h1>
+
+                <p>
+                    Secure your sensitive files with AES-256 encryption
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- Security badges -->
+
+        <section class="security-badges">
+
+            <div class="badge">
+                <span>🔒</span>
+                <strong>AES-256</strong>
+                <small>Encryption</small>
+            </div>
+
+            <div class="badge">
+                <span>🔑</span>
+                <strong>PBKDF2</strong>
+                <small>Key Derivation</small>
+            </div>
+
+            <div class="badge">
+                <span>🛡️</span>
+                <strong>HMAC</strong>
+                <small>Integrity</small>
+            </div>
+
+        </section>
+
+
+        <!-- Main Card -->
+
+        <section class="card">
+
+            <!-- Mode Selection -->
+
+            <div class="mode-container">
+
+                <button
+                    id="encryptMode"
+                    class="mode-button active">
+
+                    🔒 Encrypt File
+
+                </button>
+
+                <button
+                    id="decryptMode"
+                    class="mode-button">
+
+                    🔓 Decrypt File
+
+                </button>
+
+            </div>
+
+
+            <!-- File Upload -->
+
+            <div class="upload-area"
+                 id="uploadArea">
+
+                <div class="upload-icon">
+                    📁
+                </div>
+
+                <h2 id="uploadTitle">
+                    Select a file to encrypt
+                </h2>
+
+                <p>
+                    Click below to choose a file from your computer
+                </p>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    hidden>
+
+                <button
+                    class="choose-button"
+                    id="chooseButton">
+
+                    Choose File
+
+                </button>
+
+                <div
+                    class="selected-file"
+                    id="selectedFile">
+
+                </div>
+
+            </div>
+
+
+            <!-- Password -->
+
+            <div class="form-group">
+
+                <label for="password">
+                    🔑 Password
+                </label>
+
+                <div class="password-wrapper">
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter a strong password">
+
+                    <button
+                        type="button"
+                        id="togglePassword">
+
+                        👁
+
+                    </button>
+
+                </div>
+
+                <div class="password-strength"
+                     id="passwordStrength">
+
+                </div>
+
+            </div>
+
+
+            <!-- Action Button -->
+
+            <button
+                id="actionButton"
+                class="action-button">
+
+                🔒 Encrypt File
+
+            </button>
+
+
+            <!-- Progress -->
+
+            <div
+                class="progress-container"
+                id="progressContainer">
+
+                <div class="spinner"></div>
+
+                <p id="progressText">
+                    Processing file...
+                </p>
+
+            </div>
+
+
+            <!-- Status -->
+
+            <div
+                class="status"
+                id="status">
+
+            </div>
+
+        </section>
+
+
+        <!-- How it works -->
+
+        <section class="info-section">
+
+            <h2>How It Works</h2>
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <h3>Password</h3>
+
+                    <p>
+                        Your password is processed using
+                        PBKDF2-HMAC-SHA256.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <h3>Encryption</h3>
+
+                    <p>
+                        AES-256 encrypts your file using
+                        a randomly generated IV.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <h3>Integrity</h3>
+
+                    <p>
+                        HMAC-SHA256 detects unauthorized
+                        modifications.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+
+        <footer>
+
+            <p>
+                🔐 File Protection Utility
+            </p>
+
+            <p>
+                AES-256 • PBKDF2 • HMAC-SHA256
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
